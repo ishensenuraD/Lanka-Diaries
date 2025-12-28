@@ -1,0 +1,165 @@
+/* Reset box model for consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #1F0054;
+    overflow: hidden;
+    padding: 10px 0; /* Prevents collapsing margin issues */
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center; /* Centers items */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Allows items to line up horizontally */
+    gap: 10px; /* Adds spacing between items */
+}
+
+/* Navigation Links */
+nav li {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Hover Effects */
+nav a:hover {
+    background-color: white;
+    color: black;
+    opacity: 0.7;
+}
+
+img.logo { 
+height: 40px; 
+width:40px; 
+margin-left: 20px; 
+}
+
+
+
+.mid1text{
+margin-left : 50px;
+}
+
+.para1{
+margin-left : 50px;
+margin-right : 500px;
+    font-size: 20px;
+
+}
+
+.paragraphs{
+margin-left : 500px;
+margin-right : 500px;
+font-size: 26px;
+
+}
+
+
+
+
+
+
+
+
+
+
+.quick-menu {
+
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    border: 2px solid black;
+}
+.details{
+    margin-top:60px;
+    width: 100%;
+    height: 200px;
+    border: 2px  ;
+    background-color: #19B4BD;
+
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.custom-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #19B4BD;
+    border: 2px solid #19B4BD;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #19B4BD;
+    color : white;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+img.logo2 { 
+height: 240px; 
+width:160px; 
+margin-left: 20px; 
+}
+
+
+.social-media {
+text-align: center;
+margin-top: 30px;
+}
+
+.social-media h2 {
+color: #248995;
+margin-bottom: 15px;
+font-size:32px;
+}
+
+.social-media a {
+display: inline-block;
+margin: 0 10px;
+}
+
+.social-media img {
+width: 60px;
+height: 60px;
+object-fit: contain;
+}
+
+.social-media img:hover {
+transform:scale(1.1);
+}

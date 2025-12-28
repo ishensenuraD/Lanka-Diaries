@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Explore Sri Lanka</title>
+<link rel="icon" href="map.png">
+
+  <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #1F0054;
+    overflow: hidden;
+    padding: 10px 0; /* Prevents collapsing margin issues */
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center; /* Centers items */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Allows items to line up horizontally */
+    gap: 10px; /* Adds spacing between items */
+}
+
+/* Navigation Links */
+nav li {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Hover Effects */
+nav a:hover {
+    background-color: white;
+    color: black;
+    opacity: 0.7;
+}
+
+img.logo { 
+height: 40px; 
+width:40px; 
+margin-left: 20px; 
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #007b5e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px auto;
+      max-width: 1200px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      width: 300px;
+      margin: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h3 {
+      margin: 0;
+      color: #007b5e;
+    }
+
+    .card-body p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e67e22;
+      margin-top: 10px;
+    }
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #008060; /* Slightly darker green */
+  color: white;
+  border: none;
+  padding: 14px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  Text-decoration :none ;
+}
+
+.btn:hover {
+  background-color: #006040;
+}
+
+
+
+
+
+
+
+.quick-menu {
+
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    border: 2px solid black;
+}
+.details{
+    margin-top:60px;
+    width: 100%;
+    height: 200px;
+    border: 2px  ;
+
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.custom-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #19B4BD;
+    border: 2px solid #19B4BD;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #19B4BD;
+    color : white;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+img.logo2 { 
+height: 240px; 
+width:160px; 
+margin-left: 20px; 
+}
+
+
+.social-media {
+text-align: center;
+margin-top: 30px;
+}
+
+.social-media h2 {
+color: #248995;
+margin-bottom: 15px;
+font-size:32px;
+}
+
+.social-media a {
+display: inline-block;
+margin: 0 10px;
+}
+
+.social-media img {
+width: 60px;
+height: 60px;
+object-fit: contain;
+}
+
+.social-media img:hover {
+transform:scale(1.1);
+}
+
+  </style>
+</head>
+<header style="background-color:#1F0054;">
+<img src="icon1.png" alt="Logo" class="logo" align="left"> 
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Destinations.html">Destinations</a></li>
+            <li><a href="Options.html">Tour Packages</a></li>
+            <li><a href="planning.html">Plan your Trip</a></li>
+	    <li><a href="https://www.sltda.gov.lk/en/tourism-news">Tourism News</a></li>
+            <li><a href="About.html">Reviews  &  About us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<header>
+  <h1>Sri Lanka Tour Packages</h1>
+  <p>Explore the best of paradise island with our curated tours</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <img src="8_sri-lanka-hill-country-3-day-tour.jpg" alt="Hill Country">
+    <div class="card-body">
+      <h3>Hill Country Explorer</h3>
+      <p>Kandy --> Nuwara Eliya --> Ella | Scenic train ride, tea trails, waterfalls</p>
+      <p class="price">Rs. 45,000 / 4 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="Jungle-Beach-III.jpg" alt="Beach Tour">
+    <div class="card-body">
+      <h3>Southern Coast Relaxation</h3>
+      <p>Galle --> Mirissa --> Unawatuna | Whale watching, beach time, fort visit</p>
+      <p class="price">Rs. 38,000 / 3 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="9d.jpg" alt="East Coast">
+    <div class="card-body">
+      <h3>East Coast Escape</h3>
+      <p>Trincomalee --> Nilaveli | Snorkeling, temples, island hopping</p>
+      <p class="price">Rs. 40,000 / 4 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="25.jpg" alt="Safari">
+    <div class="card-body">
+      <h3>Wildlife Safari Adventure</h3>
+      <p>Yala --> Udawalawe | Jeep safari, elephants, birds & nature</p>
+      <p class="price">Rs. 42,000 / 3 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="LK5L100400-04-E-1280-720.webp" alt="Adventure">
+    <div class="card-body">
+      <h3>Adventure & Thrills</h3>
+      <p>Kitulgala --> Belihuloya | Rafting, hiking, canyoning, camping</p>
+      <p class="price">Rs. 35,000 / 3 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="anuradhapura-polonnaruwa-sigiriya-1024x576.jpg" alt="Cultural Tour">
+    <div class="card-body">
+      <h3>Cultural Triangle Tour</h3>
+      <p>Sigiriya --> Dambulla --> Polonnaruwa | History & heritage trail</p>
+      <p class="price">Rs. 50,000 / 5 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="Mihintale_1920x700-1024x373.jpg" alt="Spiritual Tour">
+    <div class="card-body">
+      <h3>Spiritual Journey</h3>
+      <p>Mihintale --> Ridi Viharaya | Temple visits, meditation sessions</p>
+      <p class="price">Rs. 30,000 / 3 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+  <div class="card">
+    <img src="download.jpg" alt="Full Tour">
+    <div class="card-body">
+      <h3>Ultimate Sri Lanka Tour</h3>
+      <p>10 Days | Sigiriya --> Kandy --> Ella --> Yala --> Galle --> Colombo</p>
+      <p class="price">Rs. 120,000 / 10 Days</p>
+    </div>
+    <a href="packages.html" style="text-decoration: none;"><button class="btn">Book Now</button></a>
+  </div>
+
+</div>
+
+
+<footer>
+<div class="quick-menu">
+    <h2 class ="heda">Quick Menu</br></br></h2>
+    <div class="button-container">
+        <a href="Home.html"><button class="custom-btn">Home</button></a>
+        <a href="Destinations.html"><button class="custom-btn">Destinations</button></a>
+        <a href="Options.html"><button class="custom-btn">Tour Packages</button></a>
+        <a href="https://dayouting.lk/visit/Camping-Places#google_vignette"><button class="custom-btn">Camping Sites</button></a>
+        <a href="Beaches.html"><button class="custom-btn">Beach Sides</button></a>
+        <a href="Religious.html"><button class="custom-btn">Religious Places</button></a>
+        <a href="park.html"><button class="custom-btn">National Parks & Gardens</button></a>
+        <a href="Heritage.html"><button class="custom-btn">Heritage</button></a>
+        <a href="https://www.holidify.com/pages/vibrant-festivals-of-sri-lanka-3362.html"><button class="custom-btn">Festive</button></a>
+        <a href="wild.html"><button class="custom-btn">Wild</button></a>
+        <a href="Thrills.html"><button class="custom-btn">Thrills</button></a>
+        <a href="https://traveltriangle.com/blog/most-beautiful-places-in-sri-lanka/"><button class="custom-btn">Scenic</button></a>
+        <a href="Safaries.html"><button class="custom-btn">Safaris</button></a>
+        <a href="Thrills.html"><button class="custom-btn">Surfing</button></a>
+        <a href="https://srilankatravelpages.com/scuba-diving-in-sri-lanka/"><button class="custom-btn">Scuba Diving</button></a>
+        <a href="hike.html"><button class="custom-btn">Hiking</button></a>
+        <a href="watarfalls.html"><button class="custom-btn">Waterfalls</button></a>
+        <a href="https://www.booking.com/country/lk.en.html?aid=339462&pagename=lk&label=msn-ZTagsfrTzHnDfcXUkMqeEg-80539417522601:tikwd-80539604534979:loc-36:neo:mte:lp142092:dec:qshotels%20in%20sri%20lanka&utm_campaign=Sri%		20Lanka&utm_medium=cpc&utm_source=bing&utm_term=ZTagsfrTzHnDfcXUkMqeEg&msclkid=65f52b00cc7717ecf16843600ae0c71d&utm_content=Cy%3A198-Sri%20Lanka"><button class="custom-btn">Hotels</button></a>
+        <a href="https://gowithguide.com/sri-lanka/guides"><button class="custom-btn">Find a Tour Guide</button></a>
+        <a href="planning.html"><button class="custom-btn">Plan your Trip</button></a>
+        <a href="About.html"><button class="custom-btn">Reviews</button></a>
+        <a href="About.html"><button class="custom-btn">About us</button></a>
+    </div>
+
+
+
+<div class ="details">
+<table style="background-color: #19B4BD;">
+<tr>
+
+<td>
+<img src="icon1.png" alt="Logo" class="logo2" align="left">
+</td> 
+
+<td width ="65px">
+</td>
+
+<td width ="1265px" align ="center">
+
+&nbsp; Phone :  +94 113 111 1111</br>
+&nbsp; Lanka Diaries,
+&nbsp; ICT Centre,</br>
+&nbsp; University of kelaniya,</br>
+&nbsp; Sri Lanka.</br>
+&nbsp; info@xxxxxxxxx.com</br></br>
+&nbsp; &copy; 2025 Lanka Diaries. All rights reserved.</br>
+&nbsp; Developed by Group No : 19
+</td>
+
+
+<td>
+<div class="social-media">
+<h2>Follow Us</h2>
+<a href="https://www.facebook.com/share/1GCnHy7LZ3/" target="_blank">
+<img src="FB.png" alt="Facebook">
+</a>
+<a href="https://www.instagram.com/" target="_blank">
+<img src="insta.png" alt="Instagram">
+</a>
+<a href="https://www.whatsapp.com/" target="_blank">
+<img src="whtz.png" alt="Whatsapp">
+</a>
+<a href="https://www.youtube.com/" target="_blank">
+<img src="YT.png" alt="YouTube">
+</a>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+
+
+
+
+</div>
+
+</footer>
+
+</body>
+</html>

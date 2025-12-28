@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+<title>Explore Sri Lanka</title>
+<link rel="icon" href="map.png">
+<link rel="stylesheet" href="AboutUs.css"/>
+
+<script>
+function sendInquiry() {
+const textarea = document.querySelector('.inform textarea');
+const message = textarea.value.trim();
+
+if (message === "") {
+alert("Please enter your message.");
+return false;
+}
+
+alert("You are leaving this web page.");
+
+const subject = "inquiry tour";
+const mailtoLink = `mailto:diaries3lanka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+window.location.href = mailtoLink;
+
+setTimeout(() => {
+const confirmation = document.createElement('div');
+confirmation.innerText = "Your inquiry sent.";
+Object.assign(confirmation.style, {
+position: 'fixed',
+bottom: '20px',
+right: '20px',
+backgroundColor: '#1e90ff',
+color: 'white',
+padding: '12px 20px',
+borderRadius: '8px',
+fontSize: '16px',
+boxShadow: '0 2px 6px rgba(0,0,0,0.3)',zIndex: '999',});
+document.body.appendChild(confirmation);
+
+setTimeout(() => {
+confirmation.remove();}, 4000);
+
+textarea.value = "";
+}, 2000);
+return false;
+}
+</script>
+
+</head>
+
+<body bgcolor = "#F5FFF4">
+
+<header>
+<img src="icon1.png" alt="Logo" class="logo" align="left"> 
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Destinations.html">Destinations</a></li>
+            <li><a href="Options.html">Tour Packages</a></li>
+            <li><a href="planning.html">Plan your Trip</a></li>
+	    <li><a href="https://www.sltda.gov.lk/en/tourism-news">Tourism News</a></li>
+            <li><a href="About.html">Reviews  &  About us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<header class="top-bar">
+<h1>Lanka Diaries - Tourist Guide</h1>
+</header>
+
+<section class="bi">
+<div class="bi-image-container">
+<img src="sri.jpg" alt="Sigiriya">
+<div class="bi-text">
+<h2>Sri Lanka awaits</h2>
+<p>Let us guide you to the most exciting places and experiences around the island.</p>
+<form class="inform" onsubmit="return sendInquiry();">
+<textarea placeholder="Your message or inquiry..." name="message" required></textarea>
+<button type="submit">Send Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="container">
+<section class="absection">
+<div class="logo">
+<img src="logo.png" alt="logo">
+</div>
+<div class="abtext">
+<h2>About Lanka Diaries</h2>
+<h4>Welcome to Lanka Diaries - Your Trusted Travel Companion</h4>
+<p>
+Lanka Diaries is your friendly travel guide to exploring the beauty and diversity of Sri Lanka. Whether you are visiting for the first time or returning to discover more, we are here to help you plan memorable journeys across this island filled with nature, history, and culture. From golden beaches to ancient temples, tea-covered hills to colorful festivals, we guide you to some of the most breathtaking places in the country.
+</p>
+<h4>What We Do</h4>
+<p>
+Our platform offers destination guides, travel tips, hotel suggestions, transportation details, and sample itineraries. We make sure all our information is easy to understand and up to date, so you can explore Sri Lanka without stress. Whether you're traveling alone, with family, or as part of a group, Lanka Diaries helps you make the most of your trip.
+</p>
+<h4>Our Mission</h4>
+<p>
+Support travelers by providing reliable and useful travel information about Sri Lanka. We aim to help people discover the island's natural beauty and culture while encouraging respectful and responsible tourism.
+</p>
+<h4>Our Vision</h4>
+<p>
+Become a trusted online travel guide for anyone who wants to explore Sri Lanka. We believe in making travel simple, safe, and enjoyable for everyone, and we hope to inspire more people to experience the magic of this beautiful island.
+</p>
+</div>
+</section>
+
+<section class="absection">
+<div class="abtext">
+<h2>Director Board</h2>
+<h4>Meet the Leaders Behind Lanka Diaries</h4>
+
+<table style="width:100%; border-collapse:separate; border-spacing:30px 20px;">
+<tr>
+<td>
+<img src="logo.png" alt="Prabodi" class="profile-img">
+</td>
+<td style="text-align:justify;" >
+<h3>Ms.H.P.Nethsarani</h3>
+<p><strong>Founder & CEO</strong></p>
+<p>Prabodi is the visionary founder behind Lanka Diaries. With over 5 years of experience in the tourism and hospitality industry, she has traveled extensively across Sri Lanka and beyond. Her deep knowledge of local culture, history, and destinations has been instrumental in shaping the platform's strategic direction. Prabodi believes in the power of storytelling and cultural connection, aiming to transform each travel experience into a lifelong memory. Under her leadership, Lanka Diaries has grown from a local guide project to a national travel platform that is trusted by both domestic and international visitors.
+<p>
+</td>
+</tr>
+<tr>
+<td>
+<img src="logo.png" alt="Ishen" class="profile-img">
+</td>
+<td style="text-align:justify;" >
+<h3>Mr.S.I.S.D.Jayathunga</h3>
+<p><strong>Director of Operations</strong></p>
+<p>Ishen brings a wealth of expertise in logistics and operational management. He oversees the seamless functioning of all travel-related services on the platform. With a background in supply chain and event coordination, Ishen ensures that travelers receive up-to-date, accurate, and user-friendly information. He is passionate about service quality and is constantly innovating to make the customer journey as smooth and efficient as possible. Ishen also collaborates with regional partners and service providers to guarantee that the recommendations listed on Lanka Diaries meet high safety and quality standards.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<img src="logo.png" alt="Oshadhi" class="profile-img">
+</td>
+<td style="text-align:justify;" >
+<h3>Ms.R.M.O.V.Rathnayaka</h3>
+<p><strong>Director of Partnerships</strong></p>
+<p>Oshadhi plays a critical role in building long-term relationships with stakeholders, including local businesses, tourism boards, and cultural institutions. Her mission is to ensure that Lanka Diaries promotes responsible, community-based tourism that benefits both travelers and locals. Oshadhi has a background in international relations and has worked with numerous NGOs and regional councils to promote sustainable development in tourism. She is deeply committed to ethical travel and is a key driver in Lanka Diaries' efforts to highlight off-the-beaten-path destinations that preserve Sri Lanka's rich heritage and natural environment.
+</p>
+</td>
+</tr>
+</table>
+
+</div>
+</section>
+
+<div class="social-media">
+<h2>Follow Us</h2>
+<a href="https://www.facebook.com/share/1GCnHy7LZ3/" target="_blank">
+<img src="FB.png" alt="Facebook">
+</a>
+<a href="https://www.instagram.com/" target="_blank">
+<img src="insta.png" alt="Instagram">
+</a>
+<a href="https://www.whatsapp.com/" target="_blank">
+<img src="whtz.png" alt="Whatsapp">
+</a>
+<a href="https://www.youtube.com/" target="_blank">
+<img src="YT.png" alt="YouTube">
+</a>
+</div>
+
+</section>
+
+<footer class="footer">
+&copy; 2025 Lanka Diaries. All rights reserved.
+</footer>
+
+</body>
+</html>
