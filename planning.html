@@ -11,30 +11,112 @@
             var contact = document.forms["form1"]["contact"].value;
             var nic = document.forms["form1"]["nic"].value;
             var email = document.forms["form1"]["email"].value;
+            var country = document.forms["form1"]["country"].value;
+            var sdate = document.forms["form1"]["Sdate"].value;
+            var edate = document.forms["form1"]["Edate"].value;
+            var size = document.forms["form1"]["size"].value;
+            var budget = document.forms["form1"]["budget"].value;
+            var notes = document.forms["form1"]["notes"].value;
 
+            // 1. Required Field Validation
             if (name === "" || contact === "" || nic === "" || email === "") {
-                alert("All fields must be filled out!");
+                alert("All required fields must be filled out!");
                 return false;
             }
+
+            // 2. Name Validation
+            if (name.length < 2 || name.length > 50) {
+                alert("Name must be between 2 and 50 characters!");
+                return false;
+            }
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                alert("Name can only contain letters and spaces!");
+                return false;
+            }
+
+            // 3. Contact Number Validation
             if (isNaN(contact)) {
                 alert("Contact Number must be numeric!");
                 return false;
             }
-            if (!/^\S+@\S+\.\S+$/.test(email)) {
-                alert("Invalid email address!");
+            if (!/^\+?[0-9]{10,15}$/.test(contact)) {
+                alert("Contact number must be 10-15 digits (can start with +)!");
                 return false;
             }
-		if (isNaN(document.forms["form1"]["size"].value)) {
- 		   alert("Group size must be a number!");
-  		  return false;
-		}
-		if (isNaN(document.forms["form1"]["budget"].value)) {
-  		  alert("Budget must be a number!");
-  		  return false;
-		}
+
+            // 4. NIC Validation (Sri Lankan format)
+            if (!/^[0-9]{9}[vVxX]$|^[0-9]{12}$/.test(nic)) {
+                alert("Invalid NIC format! Use 9 digits + letter or 12 digits.");
+                return false;
+            }
+
+            // 5. Email Validation
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+
+            // 6. Date Validation
+            if (sdate && edate) {
+                var start_date = new Date(sdate);
+                var end_date = new Date(edate);
+                var today = new Date();
+                today.setHours(0, 0, 0, 0);
+                var max_date = new Date();
+                max_date.setFullYear(max_date.getFullYear() + 2);
+
+                if (start_date < today) {
+                    alert("Start date cannot be in the past!");
+                    return false;
+                }
+                if (end_date <= start_date) {
+                    alert("End date must be after start date!");
+                    return false;
+                }
+                if (start_date > max_date || end_date > max_date) {
+                    alert("Dates cannot be more than 2 years in advance!");
+                    return false;
+                }
+            }
+
+            // 7. Group Size Validation
+            if (isNaN(size)) {
+                alert("Group size must be a number!");
+                return false;
+            }
+            var groupSize = parseInt(size);
+            if (groupSize < 1 || groupSize > 50) {
+                alert("Group size must be between 1 and 50 people!");
+                return false;
+            }
+
+            // 8. Budget Validation
+            if (isNaN(budget)) {
+                alert("Budget must be a number!");
+                return false;
+            }
+            if (parseFloat(budget) < 0 || parseFloat(budget) > 10000000) {
+                alert("Budget must be between 0 and 10,000,000 LKR!");
+                return false;
+            }
+
+            // 9. Country Validation
+            if (country && (country.length < 2 || country.length > 50)) {
+                alert("Country name must be between 2 and 50 characters!");
+                return false;
+            }
+            if (country && !/^[a-zA-Z\s]+$/.test(country)) {
+                alert("Country can only contain letters and spaces!");
+                return false;
+            }
+
+            // 10. Notes Length Validation
+            if (notes && notes.length > 500) {
+                alert("Notes cannot exceed 500 characters!");
+                return false;
+            }
 
             return true;
-
         }
 
 window.onload = function () {
